@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>登录注册验证</title>
+  <style>
+    *{padding: 0px;margin: 0px;list-style: none;text-decoration: none;}
+    a{color: #fff;}
+    a:hover{
+      color: #1ABC9C;
+    }
+    .nav{
+      width: 100%;
+      height: 56px;
+      background-color: #2C3E50;
+    }
+    .nav ul{
+      display: flex;     
+    }
+    .nav>ul>li{
+      flex: 1;
+      line-height: 56px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <ul>
+      <li><a>首页</a></li>
+      <li><a>产品</a></li>
+      <li><a>客户</a></li>
+      <li><a>关于我们</a></li>
+      <li><a>联系</a></li>
+      <% if(login === '登录') { %>
+      <li>
+        <a href="http://localhost:3001/user_login"><%= login %></a>
+      </li>
+      <% }else{%>
+      <li>
+        <a href="http://localhost:3001/profile"><%= login %></a>
+      </li>
+      <% } %> 
+    </ul>
+  </nav>
+</body>
+</html>
+
